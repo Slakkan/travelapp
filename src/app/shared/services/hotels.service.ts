@@ -19,7 +19,6 @@ export class HotelsService {
   };
 
   constructor(private http: HttpClient) {
-    this.hotelsSubject.subscribe(res => console.log(res));
     // TODO: CREATE A RESOLVER TO GET TEST DATA
     const localTestData = localStorage.getItem('test');
     if (localTestData) {

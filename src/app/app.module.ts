@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { HotelsComponent } from './hotels/hotels.component';
 import { MapComponent } from './map/map.component';
 import { SharedModule } from './shared/shared.module';
 import { AgmCoreModule } from '@agm/core';

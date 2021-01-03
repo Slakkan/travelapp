@@ -8,17 +8,18 @@
 
 .container--content{
   overflow-y: scroll;
+  background: rgb(204, 204, 204);
 }
 
 .content {
   height: 77vh;
   scrollbar-width: none;
-  background: #fafafa;
+  background: rgb(224, 224, 224);
 }
 
 .footer {
   height: 8vh;
-  background: #263238;
+  background: #696969;
   color: white;
   text-align: center;
 }
