@@ -13,8 +13,8 @@ export class HotelsService {
 
   httpOptions = {
     headers: {
-      'x-rapidapi-key': environment.rapidApiKey,
-      'x-rapidapi-host': environment.rapidApiHost
+      'x-rapidapi-key': environment.rapidapiConfig.rapidApiKey,
+      'x-rapidapi-host': environment.rapidapiConfig.rapidApiHost
     }
   };
 
@@ -35,7 +35,7 @@ export class HotelsService {
 
   getTestData() {
     return this.http.get<SuggestionsResposne>(
-      `https://${environment.rapidApiHost}/suggest/v1.7/json?query=San%20Francisco&locale=en_US`, this.httpOptions)
+      `https://${environment.rapidapiConfig.rapidApiHost}/suggest/v1.7/json?query=San%20Francisco&locale=en_US`, this.httpOptions)
       .pipe(
         map(res => {
           const hotelsEntities: Entity[] = [];
@@ -57,7 +57,7 @@ export class HotelsService {
               take(1),
               switchMap(() => {
                 return this.http.get<ImagesResponse>(
-                  `https://${environment.rapidApiHost}/nice/image-catalog/v2/hotels/${entity.destinationId}`,
+                  `https://${environment.rapidapiConfig.rapidApiHost}/nice/image-catalog/v2/hotels/${entity.destinationId}`,
                   this.httpOptions
                 ).pipe(
                   map(img => ({

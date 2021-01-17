@@ -16,8 +16,11 @@
 
 .navbar {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   &__link {
+    display: inline-block;
     background: #f44336;
     border-radius: 2px;
     color: #747474;
